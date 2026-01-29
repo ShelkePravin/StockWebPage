@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* navbar custome background color */
+.custom-btn {
+  background-color: #fff !important;
+}
+
+.nav-link{
+  margin-left: 40px;
+}
+
+.stle{
+  /* padding-top: 5px; */
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.fa-brands{
+  font-size: 20px;
+  color: rgb(109, 109, 109);
+}
