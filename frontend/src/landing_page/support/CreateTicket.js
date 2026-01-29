@@ -29,7 +29,7 @@ function CreateTicket() {
                                                 borderRadius: "6px"
                                             }}
                                         >
-                                            <i className="fa-solid fa-circle-plus" style={{fontSize: "25px"}}></i>
+                                            <i className="fa-solid fa-circle-plus" style={{fontSize: "25px", color: "#0d6efd"}}></i>
                                         </div>
 
                                         {/* Heading */}
@@ -75,7 +75,7 @@ function CreateTicket() {
                                                 borderRadius: "6px"
                                             }}
                                         >
-                                            <i className="fa-solid fa-circle-user" style={{fontSize: "25px"}}></i>
+                                            <i className="fa-solid fa-circle-user" style={{fontSize: "25px", color: "#0d6efd"}}></i>
                                         </div>
 
                                         {/* Heading */}
@@ -120,7 +120,7 @@ function CreateTicket() {
                                                 borderRadius: "6px"
                                             }}
                                         >
-                                            <i className="fa-solid fa-bore-hole" style={{fontSize: "25px"}}></i>
+                                            <i className="fa-solid fa-bore-hole" style={{fontSize: "25px", color: "#0d6efd"}}></i>
                                         </div>
 
                                         {/* Heading */}
@@ -167,7 +167,7 @@ function CreateTicket() {
                                                 borderRadius: "6px"
                                             }}
                                         >
-                                            <i className="fa-solid fa-indian-rupee-sign" style={{fontSize: "25px"}}></i>
+                                            <i className="fa-solid fa-indian-rupee-sign" style={{fontSize: "25px", color: "#0d6efd"}}></i>
                                         </div>
 
                                         {/* Heading */}
@@ -214,7 +214,7 @@ function CreateTicket() {
                                                 borderRadius: "6px"
                                             }}
                                         >
-                                            <i className="fa-brands fa-connectdevelop" style={{fontSize: "25px"}}></i>
+                                            <i className="fa-brands fa-connectdevelop" style={{fontSize: "25px", color: "#0d6efd"}}></i>
                                         </div>
 
                                         {/* Heading */}
