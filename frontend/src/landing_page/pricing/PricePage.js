@@ -3,6 +3,7 @@ import Brokerage from "./Brokerage";
 import Hero from "./Hero";
 import Price from "./Price";
 import BorkerTable from "./BorkerTable";
+import ChargeTable from "./chargeTable";
 
 function PricePage() {
     return ( 
@@ -10,6 +11,7 @@ function PricePage() {
             <Hero />
             <Price></Price>
             <BorkerTable/>
+            <ChargeTable />
             <Brokerage />
         </>
      );

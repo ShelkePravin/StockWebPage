@@ -34,6 +34,89 @@ function PricingTable() {
         {
           label: "SEBI charges",
           values: ["₹10 / crore", "₹10 / crore", "₹10 / crore", "₹10 / crore"]
+        },
+        {
+          label: "Transaction charges",
+          values: [
+            "NSE: 0.00297%\n BSE: 0.00375%",
+            "NSE: 0.00297%\n BSE: 0.00375%",
+            "NSE: 0.00173%\n BSE: 0",
+            "NSE: 0.03503% (on premium)\n BSE: 0.0325% (on premium)"
+          ]
+        }
+      ]
+    },
+    currency: {
+      headers: [
+        "",
+        "Currency futures",
+        "Currency options"
+      ],
+      rows: [
+          {
+            label: "Brokerage",
+            values: [
+              "0.03% or ₹ 20/executed order whichever is lower",
+              "₹ 20/executed order"
+            ]
+          },
+          {
+            label: "STT/CTT",
+            values: [
+              "No STT",
+              "No STT"
+            ]
+          },
+          {
+            label: "Transaction charges",
+            values: [
+              "NSE: 0.00035%\nBSE: 0.00045%",
+              "NSE: 0.0311%\nBSE: 0.001%"
+            ]
+          }
+      ]
+    },
+    commodity: {
+      headers: [
+        "",
+        "Commodity futures",
+        "Commodity options"
+      ],
+      rows: [
+        {
+          label:"Brokerage",
+          values: [
+            "0.03% or ₹ 20/executed order whichever is lower",
+            "₹ 20/executed order"
+          ]
+        },
+        {
+          label: "STT/CTT",
+          values: [
+            "0.01% on sell side (Non-Agri)",
+            "0.05% on sell side"
+          ]
+        },
+        {
+          label: "Transaction charges",
+          values: [
+            "MCX: 0.0021% \n NSE: 0.0001%",
+            "MCX: 0.0418%\nNSE: 0.001%"
+          ]
+        },
+        {
+          label: "GST",
+          values: [
+            "18% on (brokerage + SEBI charges + transaction charges)",
+            "18% on (brokerage + SEBI charges + transaction charges)"
+          ]
+        },
+        {
+          label: "SEBI charges",
+          values: [
+            "Agri: ₹ 1 / crore \n Non-Agri: ₹ 10 / crore",
+            "₹10 / crore"
+          ]
         }
       ]
     }
@@ -48,10 +131,10 @@ function PricingTable() {
             key={tab}
             className={`me-4 pb-2 ${
               activeTab === tab
-                ? "border-bottom border-primary text-dark"
-                : "text-primary"
+                ? "border-bottom border-primary text-primary"
+                : "text-dark"
             }`}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", fontSize:"24px" }}
             onClick={() => setActiveTab(tab)}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -60,13 +143,13 @@ function PricingTable() {
       </div>
 
       {/* Table */}
-      {activeTab === "equity" && (
-        <div className="table-responsive">
-          <table className="table">
+      {tables[activeTab] && (
+        <div className="table-responsive p-3 mt-4">
+          <table className="table mb-0 table-striped">
             <thead>
-              <tr>
-                {tables.equity.headers.map((head, index) => (
-                  <th key={index} className="text-muted fw-normal">
+              <tr className="p-2">
+                {tables[activeTab].headers.map((head, index) => (
+                  <th key={index} className="text-muted fw-normal p-3 border">
                     {head}
                   </th>
                 ))}
@@ -74,11 +157,11 @@ function PricingTable() {
             </thead>
 
             <tbody>
-              {tables.equity.rows.map((row, index) => (
+              {tables[activeTab].rows.map((row, index) => (
                 <tr key={index}>
-                  <td className="fw-semibold">{row.label}</td>
+                  <td className="fw-semibold p-3">{row.label}</td>
                   {row.values.map((val, i) => (
-                    <td key={i}>{val}</td>
+                    <td key={i} className="p-3">{val}</td>
                   ))}
                 </tr>
               ))}

@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signup from './landing_page/signup/Signup'
 import Pricing from './landing_page/pricing/PricePage';
 import Products from './landing_page/products/ProductPage';
-import Support from './landing_page/support/Hero';
+import Support from './landing_page/support/SupportPage';
 import Navbar from './landing_page/Navbar';
 import Footer from './landing_page/Footer';
 import AboutPage from './landing_page/about/AboutPage';
